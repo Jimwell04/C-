@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Linq;
 
-namespace CSharpShell
+namespace HelloWorld
 {
-	class HelloWorld
+	public static class Program
 	{
-		static void Main(string[] args) {
+		public static void Main()
+		{
 			
 			Console.WriteLine("Hello, World");
-			
+
 		}
 	}
 }

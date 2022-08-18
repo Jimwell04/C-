@@ -4,12 +4,8 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <PropertyGroup>
-    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="HelloWorld.cs" />
-    <Compile Update="k.cs" />
-  </ItemGroup>
   <PropertyGroup>
     <LangVersion>
     </LangVersion>
