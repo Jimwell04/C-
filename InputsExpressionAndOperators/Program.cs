@@ -147,7 +147,6 @@ namespace InputsExpressionAndOperators
 			
 		}
 		
-		Operators();
 		
 		#endregion
 
