@@ -58,7 +58,7 @@ namespace LINQAndLambda
 				var linqQuery = 
 								from number in mixedNumbers
 								where number <= 10 
-								orderby number 
+								orderby number descending
 								select $"LINQ: {number}";
 				foreach (var val in linqQuery) 
 					Console.WriteLine(val);
@@ -83,16 +83,37 @@ namespace LINQAndLambda
 				
 				var lambdaQuery = mixedNumbers
 											.Where(number => number <= 10)
-											.OrderBy(number => number)
+											.OrderByDescending(number => number)
 											.Select(number => $"Lambda: {number}");
 				foreach (var val in lambdaQuery)
 					Console.WriteLine(val);
+					
+				// Lambda only
+				
+				Console.WriteLine();
+				
+				var count = Enumerable.Range(1,10); // Equivalent of { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+				Console.WriteLine(string.Join( " | ", count ));
+				
+				// Average
+				var countAverage = count.Where(num => num <= num).Average();
+				Console.WriteLine($"Average: {countAverage}");
+				
+				// Count
+				var numberCount = count.Count();
+				
+				// Min, Max
+				var min = count.Min();
+				var max = count.Max();
+				
+				// Sum
+				var sum = count.Sum();
+				
+				Console.WriteLine($"Count: {numberCount}, Min: {min}, Max: {max}, Sum: {sum}");
 				
 				#endregion
 				
 			}
-			
-			LINQAndLambda();
 
 		}
 	}
