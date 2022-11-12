@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+	xmlns:local="clr-namespace:Quote"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Quote.MainPage"
+	BackgroundColor="#F5F5F5">
+		
+		<StackLayout>
+			
+			<ContentView HorizontalOptions="Center">
+				
+				<Button Text="Next" 
+					TextColor="Blue" 
+					FontSize="15"
+					BackgroundColor="#F5F5F5"
+					Clicked="Button"
+					/> 
+				
+			</ContentView>
+			
+			<ContentView HorizontalOptions="Start">
+				
+				<Label Text = "Font Size: 0"
+				FontSize="15"
+				TextColor="Black"
+				FontAttributes="Bold"
+				x:Name="Value"
+				/>
+				
+			</ContentView>
+			
+			<ContentView Margin="0 25 0 25">
+				
+				<Slider Maximum="50" 
+				ThumbColor="Blue"
+				ValueChanged="Slider"
+				/>
+				
+			</ContentView>
+			
+			<ContentView>
+				
+				<Label 
+				TextColor="Black"
+				x:Name="Text"
+				/>
+				
+			</ContentView>
+			
+		</StackLayout>
+		
+</ContentPage>
